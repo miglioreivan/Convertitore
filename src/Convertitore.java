@@ -13,8 +13,34 @@ public class Convertitore {
 
     public Convertitore() {
 
-        converti.addActionListener(ActionEvent -> {
+        esadecimaleRadioButton.addActionListener(ActionEvent ->{
+            conversioni 1;
+        })
 
+        decimaleRadioButton.addActionListener(ActionEvent ->{
+            conversioni 2;
+        })
+
+        binarioRadioButton.addActionListener(ActionEvent ->{
+            conversioni 3;
+        })
+
+        ottaleRadioButton.addActionListener(ActionEvent ->{
+            conversioni 4;
+        })
+
+
+        converti.addActionListener(ActionEvent -> {
+            switch(conversioni){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
         })
     }
 
