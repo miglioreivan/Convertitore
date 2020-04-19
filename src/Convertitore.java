@@ -13,6 +13,12 @@ public class Convertitore {
         converti.addActionListener(a -> {
 
         });
+        comboBox1.addItem("EZ");
+        comboBox1.addItem("DIOPORCO");
+
+
+
+
     }
 
     public static void main(String[] args){
@@ -21,12 +27,5 @@ public class Convertitore {
         frame.setContentPane(new Convertitore().conv);
         frame.pack();
         frame.setVisible(true);
-        JComboBox comboBox1 = new JComboBox();
-        DefaultComboBoxModel comboBox1Model = new DefaultComboBoxModel();
-        comboBox1Model.addElement("HEX");
-        comboBox1Model.addElement("DEC");
-        comboBox1Model.addElement("OTT");
-        comboBox1Model.addElement("BIN");
-
     }
 }
