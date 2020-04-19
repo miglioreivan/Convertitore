@@ -2,6 +2,8 @@ import javax.swing.*;
 
 public class Convertitore {
     private int conversioni;
+    private int convers;
+    private String selezione;
 
     private JButton converti;
     private JTextField textField1;
@@ -22,9 +24,10 @@ public class Convertitore {
         comboBox2.addItem("OTT");
         comboBox2.addItem("BIN");
 
-        String value = (String)comboBox1.getSelectedItem();
 
         converti.addActionListener(a -> {
+            String value = (String)comboBox1.getSelectedItem();
+
             switch (value){
                 case "HEX":
                     textField1.setText("perri fa cagare");
