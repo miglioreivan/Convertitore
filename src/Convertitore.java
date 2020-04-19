@@ -1,9 +1,6 @@
 import javax.swing.*;
 
 public class Convertitore {
-    private int conversioni;
-    private int convers;
-    private String selezione;
 
     private JButton converti;
     private JTextField textField1;
@@ -32,7 +29,17 @@ public class Convertitore {
                 case "HEX":
                     textField1.setText("perri fa cagare");
                     break;
+                case "DEC":
+                    textField1.setText("a perri piace il cazzo");
+                    break;
+                case "OTT":
+                    textField1.setText("perri è un tiktoker");
+                    break;
+                case "BIN":
+                    textField1.setText("perri fa cagare 2 volte");
+                    break;
             }
+
 
 
         });
