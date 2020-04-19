@@ -6,12 +6,13 @@ public class Convertitore {
     private JButton converti;
     private JTextField decimale;
     private JPanel conv;
-    private JTextField ottale;
-    private JTextField binario;
-    private JTextField esadecimale;
+    private JComboBox comboBox1;
+    private JComboBox comboBox2;
 
     public Convertitore() {
+        converti.addActionListener(a -> {
 
+        });
     }
 
     public static void main(String[] args){
@@ -20,6 +21,11 @@ public class Convertitore {
         frame.setContentPane(new Convertitore().conv);
         frame.pack();
         frame.setVisible(true);
-
+        JComboBox comboBox1 = new JComboBox();
+        DefaultComboBoxModel comboBox1Model = new DefaultComboBoxModel();
+        comboBox1Model.addElement("HEX");
+        comboBox1Model.addElement("DEC");
+        comboBox1Model.addElement("OTT");
+        comboBox1Model.addElement("BIN");
     }
 }
