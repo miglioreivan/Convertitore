@@ -5,15 +5,12 @@ public class Convertitore {
 
     private JButton converti;
     private JTextField textField1;
-    private JPanel conv;
+    private JPanel Convertitore;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
     private JTextField textField2;
 
     public Convertitore() {
-        converti.addActionListener(a -> {
-
-        });
         comboBox1.addItem("");
         comboBox1.addItem("HEX");
         comboBox1.addItem("DEC");
@@ -25,12 +22,24 @@ public class Convertitore {
         comboBox2.addItem("OTT");
         comboBox2.addItem("BIN");
 
+        String value = (String)comboBox1.getSelectedItem();
+
+        converti.addActionListener(a -> {
+            switch (value){
+                case "HEX":
+                    textField1.setText("perri fa cagare");
+                    break;
+            }
+
+
+        });
+
     }
 
     public static void main(String[] args){
         JFrame frame = new JFrame("Convertitore");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setContentPane(new Convertitore().conv);
+        frame.setContentPane(new Convertitore().Convertitore);
         frame.pack();
         frame.setVisible(true);
     }
