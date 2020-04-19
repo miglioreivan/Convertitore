@@ -27,5 +27,6 @@ public class Convertitore {
         comboBox1Model.addElement("DEC");
         comboBox1Model.addElement("OTT");
         comboBox1Model.addElement("BIN");
+
     }
 }
