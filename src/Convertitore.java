@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.io.PrintWriter;
 
 public class Convertitore {
 
@@ -8,7 +9,9 @@ public class Convertitore {
     private JComboBox comboBox1;
     private JComboBox comboBox2;
     private JTextField textField2;
-
+    String result;
+    int result1;
+    
     public Convertitore() {
         comboBox1.addItem("");
         comboBox1.addItem("HEX");
@@ -24,19 +27,108 @@ public class Convertitore {
 
         converti.addActionListener(a -> {
             String value = (String)comboBox1.getSelectedItem();
+            String dec = textField1.getText();
 
             switch (value){
                 case "HEX":
-                    textField1.setText("perri fa cagare");
+
+                    String value0 = (String)comboBox2.getSelectedItem();
+                    switch (value0){
+                        case "HEX":
+                            result = textField1.getText();
+                            textField2.setText(result);
+                            break;
+                        case "DEC":
+                            result1=Integer.parseInt(dec,16);
+                            textField2.setText(String.valueOf(result1));
+                            break;
+                        case "OTT":
+                            result1=Integer.parseInt(dec,16);
+                            result= Integer.toOctalString(result1);
+                            textField2.setText(result);
+
+                            break;
+                        case "BIN":
+                            result1=Integer.parseInt(dec,16);
+                            result= Integer.toBinaryString(result1);
+                            textField2.setText(result);
+                            break;
+                    }
+
                     break;
                 case "DEC":
-                    textField1.setText("a perri piace il cazzo");
+
+                    String value1 = (String)comboBox2.getSelectedItem();
+                    switch (value1){
+                        case "HEX":
+                            result = Integer.toHexString(Integer.parseInt(dec));
+                            textField2.setText(result);
+                            break;
+                        case "DEC":
+                            result = textField1.getText();
+                            textField2.setText(result);
+                            break;
+                        case "OTT":
+                            result = Integer.toOctalString(Integer.parseInt(dec));
+                            textField2.setText(result);
+                            break;
+                        case "BIN":
+                            result = Integer.toBinaryString(Integer.parseInt(dec));
+                            textField2.setText(result);
+                            break;
+                    }
+
                     break;
                 case "OTT":
-                    textField1.setText("perri è un tiktoker");
+
+                    String value2 = (String)comboBox2.getSelectedItem();
+                    switch (value2){
+                        case "HEX":
+                            result1=Integer.parseInt(dec,8);
+                            result= Integer.toHexString(result1);
+                            textField2.setText(result);
+                            break;
+                        case "DEC":
+                            result1=Integer.parseInt(dec,8);
+                            textField2.setText(String.valueOf(result1));
+                            break;
+                        case "OTT":
+                            result = textField1.getText();
+                            textField2.setText(result);
+
+                            break;
+                        case "BIN":
+                            result1=Integer.parseInt(dec,8);
+                            result= Integer.toBinaryString(result1);
+                            textField2.setText(result);
+                            break;
+                    }
+
                     break;
                 case "BIN":
-                    textField1.setText("perri fa cagare 2 volte");
+
+                    String value3 = (String)comboBox2.getSelectedItem();
+                    switch (value3){
+                        case "HEX":
+                            result1=Integer.parseInt(dec,2);
+                            result = Integer.toHexString(result1);
+                            textField2.setText(result);
+                            break;
+                        case "DEC":
+                            result1=Integer.parseInt(dec,2);
+                            textField2.setText(String.valueOf(result1));
+                            break;
+                        case "OTT":
+                            result1=Integer.parseInt(dec,2);
+                            result = Integer.toOctalString(result1);
+                            textField2.setText(result);
+                            break;
+                        case "BIN":
+                            result = textField1.getText();
+                            textField2.setText(result);
+                            break;
+                    }
+
                     break;
             }
 
