@@ -18,12 +18,13 @@
         </constraints>
         <properties>
           <background color="-12105913"/>
-          <caretColor color="-12105913"/>
+          <caretColor color="-1"/>
           <disabledTextColor color="-12105913"/>
           <doubleBuffered value="false"/>
           <enabled value="true"/>
           <font name="Arial Black" size="18" style="0"/>
           <foreground color="-1"/>
+          <horizontalAlignment value="11"/>
         </properties>
       </component>
       <component id="af027" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
@@ -77,12 +78,13 @@
         </constraints>
         <properties>
           <background color="-12105913"/>
-          <caretColor color="-12105913"/>
+          <caretColor color="-1"/>
           <disabledTextColor color="-12105913"/>
           <doubleBuffered value="false"/>
           <enabled value="true"/>
           <font name="Arial Black" size="18" style="0"/>
           <foreground color="-1"/>
+          <horizontalAlignment value="11"/>
         </properties>
       </component>
       <component id="a8410" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
