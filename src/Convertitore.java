@@ -1,13 +1,13 @@
 import javax.swing.*;
-import java.io.PrintWriter;
+import java.util.Objects;
 
 public class Convertitore {
 
     private JButton converti;
     private JTextField textField1;
     private JPanel Convertitore;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JComboBox<String> comboBox1;
+    private JComboBox<String> comboBox2;
     private JTextField textField2;
     private JButton cancButton;
     String result;
@@ -26,7 +26,6 @@ public class Convertitore {
         comboBox2.addItem("BIN");
 
 
-
         cancButton.addActionListener(actionEvent -> {
             textField1.setText(null);
             textField2.setText(null);
@@ -36,11 +35,11 @@ public class Convertitore {
             String value = (String)comboBox1.getSelectedItem();
             String dec = textField1.getText();
 
-            switch (value){
+            switch (Objects.requireNonNull(value)){
                 case "HEX":
 
                     String value0 = (String)comboBox2.getSelectedItem();
-                    switch (value0){
+                    switch (Objects.requireNonNull(value0)){
                         case "HEX":
                             result = textField1.getText();
                             textField2.setText(result);
@@ -66,7 +65,7 @@ public class Convertitore {
                 case "DEC":
 
                     String value1 = (String)comboBox2.getSelectedItem();
-                    switch (value1){
+                    switch (Objects.requireNonNull(value1)){
                         case "HEX":
                             result = Integer.toHexString(Integer.parseInt(dec));
                             textField2.setText(result);
@@ -89,7 +88,7 @@ public class Convertitore {
                 case "OTT":
 
                     String value2 = (String)comboBox2.getSelectedItem();
-                    switch (value2){
+                    switch (Objects.requireNonNull(value2)){
                         case "HEX":
                             result1=Integer.parseInt(dec,8);
                             result= Integer.toHexString(result1);
@@ -115,7 +114,7 @@ public class Convertitore {
                 case "BIN":
 
                     String value3 = (String)comboBox2.getSelectedItem();
-                    switch (value3){
+                    switch (Objects.requireNonNull(value3)){
                         case "HEX":
                             result1=Integer.parseInt(dec,2);
                             result = Integer.toHexString(result1);
@@ -138,18 +137,16 @@ public class Convertitore {
 
                     break;
             }
-
-
-
         });
 
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         JFrame frame = new JFrame("Convertitore");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(new Convertitore().Convertitore);
         frame.pack();
         frame.setVisible(true);
     }
+
 }
