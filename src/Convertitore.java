@@ -9,6 +9,7 @@ public class Convertitore {
     private JComboBox comboBox1;
     private JComboBox comboBox2;
     private JTextField textField2;
+    private JButton cancButton;
     String result;
     int result1;
     
@@ -24,6 +25,12 @@ public class Convertitore {
         comboBox2.addItem("OTT");
         comboBox2.addItem("BIN");
 
+
+
+        cancButton.addActionListener(actionEvent -> {
+            textField1.setText(null);
+            textField2.setText(null);
+        });
 
         converti.addActionListener(a -> {
             String value = (String)comboBox1.getSelectedItem();
